@@ -1,4 +1,8 @@
+.body {
+    background-image:(black,white);
+    background-color: #cccccc;}
 .parent {
+    cursor: url(myBall.cur),auto;
     
     background-image: url("https://img.freepik.com/premium-photo/close-up-classic-car-garage-selective-focus_890887-514.jpg");
    background-position:3;
@@ -8,9 +12,25 @@
     box-shadow:  10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);    
-
+@keyframes identifier { 0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
 }
+img{animation: myAnim 5s ease-in 0s 1 normal forwards;}
+
+@keyframes .img{
+    0% {
+        background-position: center bottom;
+        background-size: 100%;
+    }
+
+    100% {
+        background-position: center bottom;
+        background-size: 150%;
+    }
+
+}}
 .child > form  {
+   
     
     
     button{
@@ -43,8 +63,12 @@ display: flexbox;
     clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
     height: 250px;
     width: 300px;
-    margin-top: 190;
-    margin-left:100;
+    margin-top:200;
+    margin-left:120;
+    
+    
+
+  
     .textboxstyle{
         padding: 10px;
      font-size: 15px;
@@ -59,25 +83,41 @@ display: flexbox;
     }
 
 }   
-.list   {
-    border-radius: 50vh;
-    background-image: linear-gradient( black,silver);
-    background-position:3;
-   background-size: cover; 
-    background-color: #744646;
-   margin :180;
-   margin-left:50vh;
-   height: 40;
+.wrapper{
+   display:flex;
+    flex-direction: row;
+    margin: 100;
 }
-  
- li{
-    color:white;
-    display: inline;
-    font-size: large;
-    text-align: end;
-    text-decoration: underline;
-  }   
-     
-     
-    
-
+.wrapper .dot{
+    height: 8vh;
+    width: 8vh;
+    border-radius: 25%;
+    display: block;
+    background-color: white;
+margin: 5px;
+animation: animate 0.6s ease-in-out infinite alternate;
+}
+.dot:nth-child(1){
+    animation-delay:  -0.25s;;
+   background-image: url(emoticon+eyes+heart+love+icon-1320166821271473962.png);
+   background-size: cover;
+}
+.dot:nth-child(2){
+    animation-delay: -5s;
+    background-image: url(icone2.png);
+    background-size: cover;
+}
+.dot:nth-child(3){
+    animation-delay: -0.75s;
+    background-image: url(icone3.png);
+    background-size: cover;
+}
+.dot:nth-child(4){
+    animation-delay: -1s;
+    background-image: url(icone4.png);
+    background-size: cover;
+}
+@keyframes animate {
+    0%{transform: translateY(-10px);}
+    100%{transform: translateY(5px);}
+}
